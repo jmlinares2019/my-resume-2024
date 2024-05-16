@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
-import { HomeComponent } from './home/home.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ResumeComponent } from './resume/resume.component';
-import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { ResumeComponent } from './pages/resume/resume.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 @NgModule({
