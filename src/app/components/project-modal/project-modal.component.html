@@ -1,13 +1,30 @@
 
 <div class="modal-header">
-    <h4 class="modal-title pull-left">{{ project.name }}</h4>
-    <button type="button" class="btn-close close pull-right" aria-label="Close">
+    <h2 class="modal-title pull-left">{{ project.name }}</h2>
+    <button 
+        type="button" 
+        class="btn-close close pull-right" 
+        aria-label="Close" 
+        (click)="modalRef.hide()">
         <span aria-hidden="true" class="visually-hidden">&times;</span>
     </button>
 </div>
-<!-- <img src="../../../assets/img/project-placeholder.png" alt="Project thumbnail"> -->
 <div class="modal-body">
-    <h5>Description</h5>
+    <carousel>
+        <div *ngFor="let picture of project.pictures">
+            <slide>
+                <img src="{{ picture }}" alt="first slide" style="display: block; width: 100%;">
+            </slide>
+        </div>
+      </carousel>
+    <h3 class="mt-2">Description</h3>
     <p>{{ project.description }}</p>
+    <p>You can find this project on Github <a href="{{ project.projectLink }}" target="_blank">here</a></p>
+    <hr>
+    <div class="tags-wrapper">
+        <div *ngFor="let tag of project.tags">
+            <span class="tag" [style.backgroundColor]="tag.color">{{ tag }}</span>
+        </div>
+    </div> 
 </div>
 
