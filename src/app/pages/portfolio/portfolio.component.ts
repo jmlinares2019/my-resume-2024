@@ -2,7 +2,7 @@ import { ProjectsService } from './../../_services/projects.service';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../../_models/Project';
-// import { Tag } from '../../_models/Tag';
+import { Tag } from '../../_models/Tag';
 
 @Component({
   selector: 'app-portfolio',
@@ -16,11 +16,23 @@ export class PortfolioComponent implements OnInit{
   }
 
   projects = {} as Project[];
+  
+  isCollapsed: boolean = true;
+
+  typescript: boolean = false;
 
   ngOnInit(): void { 
     // getProjects when the component is initialized 
     // (without clicking any button or performing any action)
     this.projects = this.ProjectsService.getProjects();
+  }
+
+  filterProjects(){
+    let filterTags: Tag[] = [];
+    if (this.typescript){
+      filterTags.push(Tag.TYPESCRIPT);
+    }
+    this.projects = this.ProjectsService.getProjectsByFilter(filterTags);
   }
 
 }
