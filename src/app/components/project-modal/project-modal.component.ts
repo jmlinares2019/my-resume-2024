@@ -1,4 +1,3 @@
-import { ProjectsService } from './../../_services/projects.service';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Component, Input } from '@angular/core';
 import { Project } from '../../_models/Project';
