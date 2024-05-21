@@ -1,4 +1,19 @@
-.card-wrapper {
+.form-wrapper {
+  min-height: 70px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form-wrapper small.grouping-labels {
+  min-width: 100px;
+}
+.form-wrapper .form-group {
+  min-width: 7rem;
+}
+
+.portfolio-wrapper {
+  justify-content: space-between;
+}
+.portfolio-wrapper .card-wrapper {
   border: 1px solid red;
   max-width: 380px;
   min-width: 380px;
