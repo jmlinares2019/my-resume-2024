@@ -1,14 +1,137 @@
 <div class="container">
-    <div class="row">
-        <div class="card-wrapper col-lg-4 col-md-6">
-            <app-project-card></app-project-card>
+
+    <div class="row form-wrapper">
+        <!-- Buttons -->
+        <div class="button-wrapper col-lg-3 col-xl-2">
+            <button 
+                class="btn btn-outline-primary mb-2 me-2"
+                (click)="isCollapsed = !isCollapsed">
+                Filter
+            </button>
+            <button 
+                [hidden]="!filtering"
+                class="btn btn-outline-secondary mb-2"
+                (click)="resetFilters()">
+                Reset
+            </button>
         </div>
-        <div class="card-wrapper col-lg-4 col-md-6">
-            <app-project-card></app-project-card>
-        </div>
-        <div class="card-wrapper col-lg-4 col-md-6">
-            <app-project-card></app-project-card>
-        </div>
+        <!-- / Buttons -->
+        <!-- Form -->
+        <div [collapse]="isCollapsed" class="col-lg-9 col-xl-10">
+            
+            <form>
+                <div class="row mx-0">
+                    <div class="col d-sm-flex">
+                        <small class="grouping-labels"><b>Languages</b></small>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="typescript"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="typescript"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">TypeScript</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="javascript"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="javascript"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">JavaScript</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="python"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="python"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">Python</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="csharp"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="csharp"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">C#</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="java"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="java"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">Java</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-sm-flex">
+                        <small class="grouping-labels"><b>Frameworks</b></small>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="ng"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="angular"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">Angular</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="react"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="react"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">React</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="nodejs"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="nodejs"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">NodeJS</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
+                                    name="aspnet"
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="aspnet"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">ASPNet</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div><!-- / Form -->
     </div>
+
+    <!-- Portfolio -->
+    <div class="row portfolio-wrapper">
+        <div 
+            *ngFor="let project of projects"
+            class="card-wrapper col-lg-4 col-md-6">
+            <app-project-card [project]="project">
+                <!-- Project -->
+            </app-project-card>
+        </div>
+    </div><!-- / Portfolio -->
 </div>
 
