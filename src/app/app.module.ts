@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { AccordionModule } from 'ngx-bootstrap/accordion'
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import { ProjectModalComponent } from './components/project-modal/project-modal.
     ModalModule.forRoot(),
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
+    AccordionModule.forRoot(),
     FormsModule
   ],
   providers: [
