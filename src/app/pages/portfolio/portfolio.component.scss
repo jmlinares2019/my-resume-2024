@@ -1,7 +1,21 @@
+// Sass partials
+@import '../../../sass/abstracts/variables';
+@import '../../../sass/abstracts/fonts';
+@import '../../../sass/abstracts/mixins';
+
+.container{
+    padding-top: 5vh;
+}
+
 .form-wrapper{
     min-height: 70px;
     align-items: center;
     margin-bottom: 20px;
+
+    .animated-button{
+        @include animated-button($pink);
+        margin-bottom: 10px;
+    }
 
     small.grouping-labels{
         min-width: 100px;
@@ -17,8 +31,8 @@
 
     .card-wrapper{
         border: 1px solid red;
-        max-width: 380px; // use col- ?
-        min-width: 380px;
+        // max-width: 380px; // use col- ?
+        // min-width: 380px;
         margin-bottom: 1.5rem;
     }
 }
