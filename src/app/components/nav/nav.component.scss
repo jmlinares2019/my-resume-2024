@@ -3,6 +3,25 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
+h1{
+    font-size: 3rem;
+    background: linear-gradient(to right, $lightViolet, $pink);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-brand{
+    color: $pink;
+}
+
+.navbar-collapse{
+    justify-content: flex-end;
+}
+
+.nav-item{
+    color: $darkGrey;
+}
+
 .nav-item-active{
-    color: $white !important;
+    color: lightgrey !important;
 }

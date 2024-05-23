@@ -3,6 +3,10 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
+.container{
+    padding-top: 5vh;
+}
+
 .form-wrapper{
     min-height: 70px;
     align-items: center;
