@@ -9,6 +9,25 @@
 // Importing Datepicker SCSS file
 @import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
+// Sass partials
+@import 'sass/abstracts/variables';
+@import 'sass/abstracts/fonts';
+@import 'sass/abstracts/mixins';
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    // test
+    background-color: $darkerViolet;
+    color: $white;
+}
+
+div{
+    border: 1px solid darkblue;
+}
+
 .tag{
     margin-right: 0.5rem;
     margin-bottom: 0.25rem;

@@ -1,4 +1,8 @@
-.jumbotron{
-    padding: 2rem;
-    background-color: #e9ecef;
+// Sass partials
+@import '../../../sass/abstracts/variables';
+@import '../../../sass/abstracts/fonts';
+@import '../../../sass/abstracts/mixins';
+
+header{
+     padding-top: 30px;
 }

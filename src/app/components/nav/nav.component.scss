@@ -1,0 +1,8 @@
+// Sass partials
+@import '../../../sass/abstracts/variables';
+@import '../../../sass/abstracts/fonts';
+@import '../../../sass/abstracts/mixins';
+
+.nav-item-active{
+    color: $white !important;
+}

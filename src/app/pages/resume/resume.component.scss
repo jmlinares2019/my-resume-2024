@@ -1,6 +1,15 @@
+// Sass partials
+@import '../../../sass/abstracts/variables';
+@import '../../../sass/abstracts/fonts';
+@import '../../../sass/abstracts/mixins';
+
 .accordion-heading{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+}
+
+.animated-button{
+    @include animated-button($blue);
 }
