@@ -9,7 +9,11 @@
                 <i [hidden]="experienceIsOpen" class="bi bi-chevron-down"></i>
                 <i [hidden]="!experienceIsOpen" class="bi bi-chevron-up"></i>
             </button>
-            <p>Aute minim proident sit dolore esse non aute fugiat laboris excepteur dolor duis. Nostrud qui et laboris fugiat ullamco sit mollit anim esse exercitation esse ullamco. Cillum qui excepteur nulla culpa anim eu magna aute nisi cupidatat. Dolor pariatur Lorem labore incididunt. Nulla enim nulla amet amet reprehenderit commodo. Esse sint reprehenderit officia qui dolore exercitation deserunt mollit dolore in commodo esse ut.</p>
+            <div
+                *ngFor="let experience of experiences">
+                <app-experience [experience]="experience"></app-experience>
+            </div>
+                
         </accordion-group>
         <accordion-group [(isOpen)]="educationIsOpen">
             <button 

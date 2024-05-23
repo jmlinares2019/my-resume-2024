@@ -1,15 +1,23 @@
-import { Component, Renderer2 } from '@angular/core';
+import { ExperiencesService } from './../../_services/experiences.service';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Experience } from '../../_models/Experience';
 
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
-export class ResumeComponent {
+export class ResumeComponent implements OnInit{
   
-  constructor(private titleService: Title, private renderer: Renderer2){
+  experiences = {} as Experience[];
+  
+  constructor(private titleService: Title, private renderer: Renderer2, private ExperiencesService: ExperiencesService){
     this.titleService.setTitle("John Doe - Resume");
+  }
+
+  ngOnInit(): void {
+    this.experiences = this.ExperiencesService.getExperiences();
   }
 
   // Experience
