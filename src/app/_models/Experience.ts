@@ -1,3 +1,5 @@
+import { Tag } from "./Tag";
+
 export interface Experience{
     id: number;
     company: string;
@@ -6,5 +8,7 @@ export interface Experience{
     position: string;
     duration: string;
     description: string;
-    projectLink: string;
+    techStack: Tag[];
+    altTechStack: string[];
+    projectLink: string[];
 }
