@@ -29,10 +29,6 @@ export class Tag{
     static readonly GIT = new Tag("Git", "");
     static readonly ACC = new Tag("Adobe Creative Cloud", "");
 
-    
-
-
-
     private constructor(private readonly key: string, readonly color: string){
 
     }
