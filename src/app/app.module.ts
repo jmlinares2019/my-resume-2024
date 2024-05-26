@@ -18,6 +18,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectModalComponent } from './components/project-modal/project-modal.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { EducationComponent } from './components/education/education.component';
+import { LanguagesComponent } from './components/languages/languages.component';
+import { SkillsComponent } from './pages/resume/skills/skills.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { ExperienceComponent } from './components/experience/experience.componen
     ContactComponent,
     ProjectCardComponent,
     ProjectModalComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    EducationComponent,
+    LanguagesComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
