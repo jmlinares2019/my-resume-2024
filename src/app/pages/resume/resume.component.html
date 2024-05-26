@@ -1,6 +1,7 @@
 <div class="container poppins-regular">
     <!-- Interactive resume -->
     <accordion [isAnimated]="true">
+        <!-- Experience -->
         <accordion-group [(isOpen)]="experienceIsOpen">
             <button 
                 accordion-heading
@@ -12,9 +13,9 @@
             <div
                 *ngFor="let experience of experiences">
                 <app-experience [experience]="experience"></app-experience>
-            </div>
-                
+            </div>  
         </accordion-group>
+        <!-- Education -->
         <accordion-group [(isOpen)]="educationIsOpen">
             <button 
                 accordion-heading
@@ -23,18 +24,26 @@
                 <i [hidden]="educationIsOpen" class="bi bi-chevron-down"></i>
                 <i [hidden]="!educationIsOpen" class="bi bi-chevron-up"></i>
             </button>
-            <p>Aute minim proident sit dolore esse non aute fugiat laboris excepteur dolor duis. Nostrud qui et laboris fugiat ullamco sit mollit anim esse exercitation esse ullamco. Cillum qui excepteur nulla culpa anim eu magna aute nisi cupidatat. Dolor pariatur Lorem labore incididunt. Nulla enim nulla amet amet reprehenderit commodo. Esse sint reprehenderit officia qui dolore exercitation deserunt mollit dolore in commodo esse ut.</p>
+            <div
+                *ngFor="let education of educations">
+                <app-education [education]="education"></app-education>
+            </div>
         </accordion-group>
-        <accordion-group [(isOpen)]="certificatesIsOpen">
+        <!-- Languages -->
+        <accordion-group [(isOpen)]="languagesIsOpen">
             <button 
                 accordion-heading
                 class="accordion-heading btn">
-                <h4 class="btn-link">Certificates</h4>
-                <i [hidden]="certificatesIsOpen" class="bi bi-chevron-down"></i>
-                <i [hidden]="!certificatesIsOpen" class="bi bi-chevron-up"></i>
+                <h4 class="btn-link">Languages</h4>
+                <i [hidden]="languagesIsOpen" class="bi bi-chevron-down"></i>
+                <i [hidden]="!languagesIsOpen" class="bi bi-chevron-up"></i>
             </button>
-            <p>Aute minim proident sit dolore esse non aute fugiat laboris excepteur dolor duis. Nostrud qui et laboris fugiat ullamco sit mollit anim esse exercitation esse ullamco. Cillum qui excepteur nulla culpa anim eu magna aute nisi cupidatat. Dolor pariatur Lorem labore incididunt. Nulla enim nulla amet amet reprehenderit commodo. Esse sint reprehenderit officia qui dolore exercitation deserunt mollit dolore in commodo esse ut.</p>
+            <div 
+                *ngFor="let language of languages">
+                <app-languages [language]="language"></app-languages>
+            </div>
         </accordion-group>
+        <!-- Skills -->
         <accordion-group [(isOpen)]="skillsIsOpen">
             <button 
                 accordion-heading
@@ -43,35 +52,7 @@
                 <i [hidden]="skillsIsOpen" class="bi bi-chevron-down"></i>
                 <i [hidden]="!skillsIsOpen" class="bi bi-chevron-up"></i>
             </button>
-            <div class="row">
-                <div class="col">
-                    <h5 class="skills-heading">Languages</h5>
-                    <ul class="skills-list">
-                        <li class="skill-item"
-                            *ngFor="let language of languages">
-                            {{ language }}
-                        </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5 class="skills-heading">Frameworks</h5>
-                    <ul class="skills-list">
-                        <li class="skill-item"
-                            *ngFor="let framework of frameworks">
-                            {{ framework }}
-                        </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5 class="skills-heading">Others</h5>
-                    <ul class="skills-list">
-                        <li class="skill-item"
-                            *ngFor="let other of others">
-                            {{ other }}
-                        </li>
-                    </ul>
-                </div>
-            </div> 
+            <app-skills></app-skills>
         </accordion-group>
     </accordion>
     <!-- PDF resume -->
