@@ -36,8 +36,8 @@ export class EducationService {
       title: "Graphic Design Assistant Diplomma",
       center: "UGT",
       location: "Madrid (ES)",
-      duration: "125h",
-      timePeriod: "2017 - 2018"
+      duration: "580h",
+      timePeriod: "2012"
     }
     
   ]
