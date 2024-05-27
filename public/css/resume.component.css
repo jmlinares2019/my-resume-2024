@@ -1,6 +1,69 @@
-.accordion-heading {
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.figtree-bold {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.btn.accordion-heading {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  padding-left: 0;
+  padding-inline-start: 0px;
+}
+.btn.accordion-heading .btn-link {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.btn.accordion-heading .btn-link:hover {
+  color: #9d9d9d;
+}
+
+/* .card-header{
+    background-color: transparent;
+} */
+.download-resume-btn {
+  display: flex;
+  justify-content: end;
+}
+.download-resume-btn .animated-button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: 3px solid #F27BBD;
+  background-image: linear-gradient(to right, #C65BCF, #F27BBD);
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  position: relative;
+  isolation: isolate;
+}
+.download-resume-btn .animated-button:hover {
+  color: #F27BBD;
+  scale: 0.975;
+  transition: scale 50ms;
+}
+.download-resume-btn .animated-button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #F6F5F2;
+  color: #F27BBD;
+  inset: 0;
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale 250ms;
+}
+.download-resume-btn .animated-button:hover::after, .download-resume-btn .animated-button:focus-visible::after {
+  scale: 1 1;
+  transform-origin: left;
 }

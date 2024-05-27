@@ -1,0 +1,62 @@
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.figtree-bold {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+nav.navbar {
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+nav.navbar h1 {
+  font-size: 3rem;
+  background: linear-gradient(to right, #C65BCF, #F27BBD);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav.navbar .navbar-collapse {
+  justify-content: flex-end;
+  order: 2;
+}
+nav.navbar .navbar-collapse .nav-item {
+  color: #9d9d9d;
+}
+nav.navbar .navbar-collapse .nav-item-active {
+  color: lightgrey !important;
+}
+nav.navbar .social-links {
+  display: flex;
+}
+nav.navbar .social-links a {
+  margin-right: 0.5rem;
+  color: #874CCC;
+}
+nav.navbar .social-links a i.bi::before {
+  font-size: x-large;
+}
+
+@media screen and (max-width: 992px) {
+  .social-links {
+    padding-top: 10px;
+  }
+  button.navbar-toggler {
+    order: 2;
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+    order: 3;
+  }
+}
+@media screen and (min-width: 992px) {
+  .social-links {
+    margin-left: 1rem;
+  }
+}
