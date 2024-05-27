@@ -17,6 +17,10 @@ import { ResumeComponent } from './pages/resume/resume.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectModalComponent } from './components/project-modal/project-modal.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { EducationComponent } from './components/education/education.component';
+import { LanguagesComponent } from './components/languages/languages.component';
+import { SkillsComponent } from './pages/resume/skills/skills.component';
 
 
 @NgModule({
@@ -29,7 +33,11 @@ import { ProjectModalComponent } from './components/project-modal/project-modal.
     ResumeComponent,
     ContactComponent,
     ProjectCardComponent,
-    ProjectModalComponent
+    ProjectModalComponent,
+    ExperienceComponent,
+    EducationComponent,
+    LanguagesComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
