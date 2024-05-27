@@ -1,30 +1,17 @@
 <div class="container">
     <div class="row">
-        <!-- About me -->
-        <div class="col-6">
-            <!-- <div class="text-center"> -->
-                <!-- <h2>About Me</h2> -->
-                <img src="../../../assets/img/profile-pic.png" alt="profile-picture" width="256" height="256" class="rounded-circle">
-                <p>Front End developer in HTML5, CSS and JS, CMS and frameworks like Wordpress or Laravel, and control version with Git. I have a Communication background and mindset, which spans from copywriting to video production. Fluent in English and Italian, native Spanish and Catalan. Trying my best with Czech</p>
-            <!-- </div> -->
-        </div>
-        <!-- Featured project 
-        <div class="col-lg shadow border m-1">
-            <div class="center-text">
-                <h2>Featured Project</h2>
-                <h4>{{ featuredProject.name }}</h4> 
-            </div>
-            Pictures carousel
-            <carousel>
-                <div *ngFor="let picture of featuredProject.pictures">
-                    <slide>
-                        <img src="{{ picture }}" alt="first slide" style="display: block; width: 100%;">
-                    </slide>
+        <div class="intro col-lg-6">
+            <div class="row">
+                <div class="col-sm-5">
+                    <img src="../../../assets/img/profile-pic.png" alt="profile-picture" width="256" height="256" class="rounded-circle">
                 </div>
-            </carousel>
-
-            <p class="mt-2">{{ featuredProject.summary }}</p>
-            <p>Visit the portfolio section to learn more</p>
-        </div> -->
+                <div class="col-sm-7">
+                    <p>Front End developer in HTML5, CSS and JS, CMS and frameworks like Wordpress or Laravel, and control version with Git. I have a Communication background and mindset, which spans from copywriting to video production. Fluent in English and Italian, native Spanish and Catalan. Trying my best with Czech</p>
+                </div>
+            </div>
+        </div>
+        <div class="resume col-lg-6">
+            <app-resume></app-resume>
+        </div>
     </div>
 </div>

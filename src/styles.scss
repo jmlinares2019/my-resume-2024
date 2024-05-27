@@ -20,11 +20,9 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: $black;
 
     padding-top: 10vh;
-    // test
-    background-color: #161A42;
-    color: $white;
 }
 
 div{
@@ -42,4 +40,8 @@ div{
     border-radius: 25px;
     background-color: blue;
     color: white;
+}
+
+.card-header{
+    background-color: transparent;
 }

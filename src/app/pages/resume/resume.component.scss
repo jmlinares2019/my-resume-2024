@@ -3,13 +3,33 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
-.accordion-heading{
+.btn.accordion-heading{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
+    padding-inline-start: 0px;
+
+    .btn-link{
+        text-decoration: none;
+        transition: color .2s;
+
+        &:hover{
+            color: $darkGrey;
+        }
+    }
 }
 
-.animated-button{
-    @include animated-button($blue);
+/* .card-header{
+    background-color: transparent;
+} */
+
+.download-resume-btn{
+    display: flex;
+    justify-content: end;
+
+    .animated-button{
+        @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
+    }
 }
