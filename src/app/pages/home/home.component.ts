@@ -1,23 +1,15 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ProjectsService } from './../../_services/projects.service';
-import { Project } from '../../_models/Project';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor(private titleService: Title, private ProjectsService: ProjectsService, private renderer: Renderer2, ){
+  constructor(private titleService: Title, private renderer: Renderer2, ){
     this.titleService.setTitle("John Doe - Home");
-  }
-
-  featuredProject = {} as Project;
-
-  ngOnInit(): void {
-    // this.featuredProject = this.ProjectsService.getProjectById(1);
   }
 
   // Download PDF file
