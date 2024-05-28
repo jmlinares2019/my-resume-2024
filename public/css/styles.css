@@ -12552,10 +12552,6 @@ body {
   padding-top: 10vh;
 }
 
-div {
-  border: 1px solid darkblue;
-}
-
 .tag {
   margin-right: 0.5rem;
   margin-bottom: 0.25rem;
@@ -12569,6 +12565,9 @@ div {
   color: white;
 }
 
-.card-header {
+.card {
+  --bs-card-border-color: transparent;
+}
+.card .card-header {
   background-color: transparent;
 }

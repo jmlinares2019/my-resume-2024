@@ -26,7 +26,7 @@
   cursor: pointer;
   text-decoration: none;
   border: 3px solid #F27BBD;
-  background-image: #F27BBD;
+  background-image: linear-gradient(to right, #C65BCF, #F27BBD);
   color: white;
   padding: 0.5em 1em;
   border-radius: 0.25em;

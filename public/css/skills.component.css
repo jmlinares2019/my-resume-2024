@@ -1,0 +1,43 @@
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.figtree-bold {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills-list .skill-item {
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border: 1px solid #874CCC;
+  color: #874CCC;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.5s, color 0.5s;
+}
+.skills-list .skill-item:hover {
+  cursor: pointer;
+  background-color: #874CCC;
+  color: white;
+}
+.skills-list .language-item {
+  color: #10439F;
+  background-color: #10439F;
+}
+.skills-list .other-item {
+  color: #F27BBD;
+  border-color: #F27BBD;
+}
+.skills-list .other-item:hover {
+  background-color: #F27BBD;
+}
