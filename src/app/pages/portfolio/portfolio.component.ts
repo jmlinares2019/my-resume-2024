@@ -12,24 +12,34 @@ import { Tag } from '../../_models/Tag';
 export class PortfolioComponent implements OnInit{
 
   constructor(private titleService: Title, private ProjectsService: ProjectsService){
-    this.titleService.setTitle("John Doe - Portfolio");
+    this.titleService.setTitle("Juan Manuel Linares - Portfolio");
   }
 
   projects = {} as Project[];
   
   isCollapsed: boolean = true;
   filtering: boolean = false;
-
-  csharp: boolean = false;
+  // languages
+  html: boolean = false;
+  css: boolean = false;
   javascript: boolean = false;
   typescript: boolean = false;
-  python: boolean = false;
-  java: boolean = false;
-
-  aspnet: boolean = false;
+  php: boolean = false;
+  // others
   nodejs: boolean = false;
   angular: boolean = false;
   react: boolean = false;
+  json: boolean = false;
+  api: boolean = false;
+  wordpress: boolean = false;
+
+  csharp: boolean = false;
+  python: boolean = false;
+  java: boolean = false;
+  aspnet: boolean = false;
+
+
+
   
 
   ngOnInit(): void { 

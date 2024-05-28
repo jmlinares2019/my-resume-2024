@@ -23,6 +23,7 @@ export class Tag{
     static readonly ASPNET = new Tag("ASP.NET", "");
     
     // Others
+    static readonly RESTAPI = new Tag("REST API", "");
     static readonly JSON = new Tag("JSON", "");
     static readonly WORDPRESS = new Tag("Wordpress", "");
     static readonly NODEJS = new Tag("NodeJS", "");

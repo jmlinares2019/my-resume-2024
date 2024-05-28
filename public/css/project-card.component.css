@@ -1,4 +1,97 @@
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.figtree-bold {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .card {
   max-width: 350px;
   min-width: 350px;
+  border: 1px solid #999999;
+  transition: background-color 0.2s;
+}
+.card:hover {
+  color: #C65BCF;
+  background-color: #ececec;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #9d9d9d;
+}
+
+.card-links {
+  display: flex;
+  align-items: baseline;
+}
+.card-links a {
+  font-size: x-large;
+  color: inherit;
+  margin-right: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: 3px solid #C65BCF;
+  background-image: linear-gradient(to right, #874CCC, #C65BCF);
+  color: white;
+  padding: 0 1em;
+  border-radius: 0.25em;
+  position: relative;
+  isolation: isolate;
+}
+.btn:hover {
+  color: #C65BCF;
+  scale: 0.975;
+  transition: scale 50ms;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #F6F5F2;
+  color: #C65BCF;
+  inset: 0;
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale 250ms;
+}
+.btn:hover::after, .btn:focus-visible::after {
+  scale: 1 1;
+  transform-origin: left;
+}
+
+.card-footer {
+  background-color: transparent;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border: 1px solid #999999;
+  color: #999999;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.5s, color 0.5s;
+  line-height: 2.5;
+}
+.tag:hover {
+  cursor: pointer;
+  background-color: #999999;
+  color: white;
 }
