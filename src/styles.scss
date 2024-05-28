@@ -20,6 +20,7 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: $white;
     color: $black;
 
     padding-top: 10vh;
@@ -44,6 +45,7 @@ div{
 
 .card{
     --bs-card-border-color: transparent;
+    --bs-card-bg: transparent;
 
     .card-header{
         background-color: transparent;   

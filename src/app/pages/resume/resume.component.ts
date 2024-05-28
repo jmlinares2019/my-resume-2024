@@ -35,7 +35,7 @@ export class ResumeComponent implements OnInit{
   educationIsOpen: boolean = false;
 
   // Languages
-  languagesIsOpen: boolean = true;
+  languagesIsOpen: boolean = false;
 
   // Skills
   skillsIsOpen: boolean = false;

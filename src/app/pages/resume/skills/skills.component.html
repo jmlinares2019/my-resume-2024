@@ -1,19 +1,19 @@
 <div class="skills-wrapper">
-    <h4>Languages</h4>
+    <h4 class="skills-heading">Languages</h4>
     <div class="skills-list languages-list">
         <ng-container *ngFor="let language of skills[0]">
             <a class="skill-item language-item">{{ language }}</a>
         </ng-container>   
     </div>
     
-    <h4>Frameworks</h4>
+    <h4 class="skills-heading">Frameworks</h4>
     <div class="skills-list frameworks-list">
         <ng-container *ngFor="let framework of skills[1]">
             <a class="skill-item framework-item">{{ framework }}</a>
     </ng-container>
     </div>
 
-    <h4>Others</h4>
+    <h4 class="skills-heading">Others</h4>
     <div class="skills-list others-list">
         <ng-container *ngFor="let other of skills[2]">
             <a class="skill-item other-item">{{ other }}</a>

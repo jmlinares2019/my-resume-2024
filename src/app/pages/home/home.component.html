@@ -8,14 +8,24 @@
                 <div class="col-sm-7">
                     <p>Front End developer in HTML5, CSS and JS, CMS and frameworks like Wordpress or Laravel, and control version with Git.</p>
                     <p>I have a Communication background and mindset, which spans from copywriting to video production. Fluent in English and Italian, native Spanish and Catalan. Trying my best with Czech</p>
-                    <!-- PDF resume -->
-                    <div class="download-resume-btn">
-                        <button
-                            (click)="downloadFile()"
-                            class="animated-button">
-                            Download PDF Resume
-                        </button>
-                    </div>
+                    <div class="intro-buttons d-flex justify-content-between">
+                        <!-- PDF resume -->
+                        <div class="download-resume-btn">
+                            <button
+                                (click)="downloadFile()"
+                                class="animated-button">
+                                Download PDF Resume
+                            </button>
+                        </div>
+                        <!-- Github repo btn -->
+                        <mdo-github-button
+                            user="jmlinares2019"
+                            repo="angular-portfolio-website"
+                            type="watch"
+                            size="large"
+                            target="_blank">
+                        </mdo-github-button>
+                    </div>   
                 </div>
             </div>
         </div>

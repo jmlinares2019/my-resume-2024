@@ -3,8 +3,12 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
-.card-header{
-    border: 2px solid $blue;
+.accordion{
+    margin-bottom: 40px;
+
+    .card-header{
+        border: 2px solid $blue;
+    }
 }
 
 button.btn.accordion-heading{
@@ -15,7 +19,13 @@ button.btn.accordion-heading{
     padding-left: 0;
     padding-inline-start: 0px;
     --bs-btn-border-radius: 0;
-    border-bottom: 2px solid $lightgrey;
+    border-bottom: 2px solid $midGrey;
+    transition: background-color .2s, padding-left .2s;
+
+    &.open{
+        padding-left: 1rem;
+        background-color: $lightGrey;
+    }
 
     h3.btn-link{
         font-size: 1.15rem;

@@ -3,9 +3,14 @@
 @import '../../../../sass/abstracts/fonts';
 @import '../../../../sass/abstracts/mixins';
 
+/* .skills-heading{
+
+} */
+
 .skills-list{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 
     .skill-item{
         @include skillTag($violet);
@@ -13,7 +18,11 @@
 
     .language-item{
         color: $blue;
-        background-color: $blue; // efect interesante!
+        border-color: $blue;
+
+        &:hover{
+            background-color: $blue;
+        }
     }
 
     .other-item{
