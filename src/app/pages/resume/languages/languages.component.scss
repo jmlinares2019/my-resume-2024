@@ -1,0 +1,13 @@
+// Sass partials
+@import '../../../../sass/abstracts/variables';
+@import '../../../../sass/abstracts/fonts';
+@import '../../../../sass/abstracts/mixins';
+
+.language-name{
+    font-size: 1rem;
+    line-height: 1.5;
+
+    span.language-level{
+        color: $midGrey;
+    }
+}

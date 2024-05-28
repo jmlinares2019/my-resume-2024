@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Language } from '../../_models/Languages';
+import { Language } from '../../../_models/Languages';
 
 @Component({
   selector: 'app-languages',

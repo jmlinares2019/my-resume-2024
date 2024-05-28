@@ -1,6 +1,4 @@
-import { ProjectsService } from './../../_services/projects.service';
-import { Project } from '../../_models/Project';
-import { Component, OnInit } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -8,16 +6,20 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor(private titleService: Title, private ProjectsService: ProjectsService){
+  constructor(private titleService: Title, private renderer: Renderer2, ){
     this.titleService.setTitle("John Doe - Home");
   }
 
-  featuredProject = {} as Project;
-
-  ngOnInit(): void {
-    this.featuredProject = this.ProjectsService.getProjectById(1);
+  // Download PDF file
+  downloadFile(){
+    const link = this.renderer.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', '../../../assets/resume_2023.pdf');
+    link.setAttribute('download', 'resume_2023.pdf');
+    link.click();
+    link.remove();
   }
 
   

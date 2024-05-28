@@ -20,15 +20,14 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: $white;
+    color: $black;
 
     padding-top: 10vh;
-    // test
-    background-color: #161A42;
-    color: $white;
 }
 
 div{
-    border: 1px solid darkblue;
+    // border: 1px solid darkblue;
 }
 
 .tag{
@@ -43,3 +42,13 @@ div{
     background-color: blue;
     color: white;
 }
+
+.card{
+    --bs-card-border-color: transparent;
+    --bs-card-bg: transparent;
+
+    .card-header{
+        background-color: transparent;   
+    }
+}
+

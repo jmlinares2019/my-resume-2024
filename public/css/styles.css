@@ -12528,6 +12528,31 @@ bs-daterangepicker-container {
   transition: 0s;
 }
 
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.figtree-bold {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #F6F5F2;
+  color: #1d1d1d;
+  padding-top: 10vh;
+}
+
 .tag {
   margin-right: 0.5rem;
   margin-bottom: 0.25rem;
@@ -12539,4 +12564,12 @@ bs-daterangepicker-container {
   border-radius: 25px;
   background-color: blue;
   color: white;
+}
+
+.card {
+  --bs-card-border-color: transparent;
+  --bs-card-bg: transparent;
+}
+.card .card-header {
+  background-color: transparent;
 }

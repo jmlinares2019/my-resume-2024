@@ -1,17 +1,18 @@
-@mixin animated-button($color){ 
+@mixin animated-button($bgColor, $color){ 
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
     border: 3px solid $color;
-    background-color: transparent;
+    background-image: $bgColor;
     color: white;
-    padding: 0.5em 1em;
+    padding: 0 1em;
     border-radius: 0.25em;
   
     position: relative;
     isolation: isolate;
   
     &:hover{
+      color: $color;
       scale: 0.975;
       transition: scale 50ms;
     }
@@ -20,7 +21,8 @@
         content: '';
         position: absolute;
         z-index: -1;
-        background-color: $color;
+        background-color: $white;
+        color: $color;
         inset: 0;
     
         scale: 0 1;
@@ -35,3 +37,19 @@
     }
 
   }
+
+@mixin skillTag($color){
+  padding: .25rem;
+  margin: .25rem;
+  border: 1px solid $color;
+  color: $color;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color .5s, color .5s;
+
+  &:hover{
+      cursor: pointer;
+      background-color: $color;
+      color: white;
+  }
+}

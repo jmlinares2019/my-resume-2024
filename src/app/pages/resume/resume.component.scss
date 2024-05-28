@@ -3,13 +3,42 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
-.accordion-heading{
+.accordion{
+    margin-bottom: 40px;
+
+    .card-header{
+        border: 2px solid $blue;
+    }
+}
+
+button.btn.accordion-heading{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-}
+    padding-left: 0;
+    padding-inline-start: 0px;
+    --bs-btn-border-radius: 0;
+    border-bottom: 2px solid $midGrey;
+    transition: background-color .2s, padding-left .2s;
 
-.animated-button{
-    @include animated-button($blue);
+    &.open{
+        padding-left: 1rem;
+        background-color: $lightGrey;
+    }
+
+    h3.btn-link{
+        font-size: 1.15rem;
+        text-decoration: none;
+        transition: color .2s;
+
+        &:hover{
+            color: $darkGrey;
+        }
+    }
+
+    i.bi{
+        color: $pink;
+        font-weight: 700;
+    }
 }

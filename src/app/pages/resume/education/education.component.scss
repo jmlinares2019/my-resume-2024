@@ -1,0 +1,19 @@
+// Sass partials
+@import '../../../../sass/abstracts/variables';
+@import '../../../../sass/abstracts/fonts';
+@import '../../../../sass/abstracts/mixins';
+
+.education-wrapper{
+    margin-top: 20px;
+    padding-top: 10px;
+
+    .education-title{
+        font-size: 1.25rem;
+    }
+
+    .education-center,
+    .education-time{
+        font-size: .875rem;
+        color: $midGrey;
+    }
+}

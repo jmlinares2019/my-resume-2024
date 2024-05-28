@@ -1,0 +1,89 @@
+.figtree-regular {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.figtree-bold {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.experience-wrapper {
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.experience-wrapper .experience-item-company:before {
+  content: "\f140";
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5rem;
+}
+.experience-wrapper .experience-item-location,
+.experience-wrapper .experience-item-duration,
+.experience-wrapper .experience-item-description {
+  font-size: 0.875rem;
+  color: #999999;
+}
+.experience-wrapper .skills,
+.experience-wrapper .sample-projects {
+  padding-top: 0.5rem;
+}
+.experience-wrapper .skills .skills-heading,
+.experience-wrapper .skills .sample-projects-heading,
+.experience-wrapper .sample-projects .skills-heading,
+.experience-wrapper .sample-projects .sample-projects-heading {
+  margin-bottom: 0.3rem;
+}
+.experience-wrapper .skills .skills-list,
+.experience-wrapper .sample-projects .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.experience-wrapper .skills .skills-list .skill-item,
+.experience-wrapper .sample-projects .skills-list .skill-item {
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border: 1px solid #874CCC;
+  color: #874CCC;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.5s, color 0.5s;
+}
+.experience-wrapper .skills .skills-list .skill-item:hover,
+.experience-wrapper .sample-projects .skills-list .skill-item:hover {
+  cursor: pointer;
+  background-color: #874CCC;
+  color: white;
+}
+.experience-wrapper .skills .sample-projects-list,
+.experience-wrapper .sample-projects .sample-projects-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.experience-wrapper .skills .sample-projects-list .project-link,
+.experience-wrapper .sample-projects .sample-projects-list .project-link {
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border: 1px solid #10439F;
+  color: #10439F;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.5s, color 0.5s;
+}
+.experience-wrapper .skills .sample-projects-list .project-link:hover,
+.experience-wrapper .sample-projects .sample-projects-list .project-link:hover {
+  cursor: pointer;
+  background-color: #10439F;
+  color: white;
+}

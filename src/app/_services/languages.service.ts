@@ -10,7 +10,7 @@ export class LanguagesService {
     {
       id: 1,
       language: "English",
-      level: "Professional"
+      level: "Professional (IELTS)"
     },
     {
       id: 2,

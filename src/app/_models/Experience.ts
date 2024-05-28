@@ -1,8 +1,10 @@
 import { Tag } from "./Tag";
+import { ProjectLinks } from "./ProjectLinks";
 
 export interface Experience{
     id: number;
     company: string;
+    hasLogo: boolean;
     logo: string;
     location: string;
     position: string;
@@ -10,5 +12,5 @@ export interface Experience{
     description: string;
     techStack: Tag[];
     altTechStack: string[];
-    projectLink: string[];
+    projectLinks: ProjectLinks[];
 }

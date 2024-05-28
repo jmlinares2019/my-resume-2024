@@ -1,0 +1,46 @@
+// Sass partials
+@import '../../../sass/abstracts/variables';
+@import '../../../sass/abstracts/fonts';
+@import '../../../sass/abstracts/mixins';
+
+.intro{
+    position: relative;
+}
+
+.intro-wrapper{
+    align-items: center;
+
+    /* &:after{ // make responsible
+        content: '\F1C9';
+        font-family: bootstrap-icons !important;
+        font-size: 25rem;
+        font-style: normal;
+        font-weight: normal !important;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        vertical-align: -.125em;
+        -webkit-font-smoothing: antialiased;
+        position: absolute;
+        top: -60px;
+        right: 0;
+        z-index: -1;
+        opacity: 0.1;
+        mix-blend-mode: hard-light;
+    } */
+}
+
+.download-resume-btn{
+    display: flex;
+
+    .animated-button{
+        @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
+    }
+}
+
+@media screen and (max-width: 991.98px){
+    .resume{
+        margin-top: 20px;
+    }
+} 
+
