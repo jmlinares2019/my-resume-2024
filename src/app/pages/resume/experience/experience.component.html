@@ -1,5 +1,26 @@
-<h3>{{ experience.company }}</h3>
-<h4>{{ experience.location }}</h4>
-<div *ngFor="let tech of experience.techStack">
-    {{ tech }}
+<div class="experience-wrapper">
+    <h4 class="experience-item-company">{{ experience.company }}</h4>
+    <p class="experience-item-location">{{ experience.location }} | <span class="experience-item-duration">{{ experience.duration }}</span></p>
+    <h5 class="experience-item-position">{{ experience.position }}</h5>
+    <p class="experience-item-description">{{ experience.description }}</p>
+    <div class="skills">
+        <p class="skills-heading">Technology stack:</p>
+        <div class="skills-list">
+            <ng-container *ngFor="let tech of experience.techStack">
+                <a class="skill-item">{{ tech }}</a>
+            </ng-container>
+        </div>
+    </div>
+    
+    <!-- if there are project links -->
+    <ng-container *ngIf="experience.projectLinks.length > 0">
+        <div class="sample-projects">
+            <p class="sample-projects-heading">Sample projects:</p>
+            <div class="sample-projects-list">
+                <ng-container *ngFor="let link of experience.projectLinks">
+                    <a href="{{ link.url }}" target="_blank" class="project-link">{{ link.name }}</a>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
 </div>

@@ -1,0 +1,27 @@
+// Sass partials
+@import '../../../../sass/abstracts/variables';
+@import '../../../../sass/abstracts/fonts';
+@import '../../../../sass/abstracts/mixins';
+
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+
+    .skill-item{
+        @include skillTag($violet);
+    }
+
+    .language-item{
+        color: $blue;
+        background-color: $blue; // efect interesante!
+    }
+
+    .other-item{
+        color: $pink;
+        border-color: $pink;
+        
+        &:hover{
+            background-color: $pink;
+        }
+    }
+}

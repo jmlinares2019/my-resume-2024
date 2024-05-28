@@ -3,15 +3,22 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
-.btn.accordion-heading{
+.card-header{
+    border: 2px solid $blue;
+}
+
+button.btn.accordion-heading{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
     padding-inline-start: 0px;
+    --bs-btn-border-radius: 0;
+    border-bottom: 2px solid $lightgrey;
 
-    .btn-link{
+    h3.btn-link{
+        font-size: 1.15rem;
         text-decoration: none;
         transition: color .2s;
 
@@ -19,17 +26,9 @@
             color: $darkGrey;
         }
     }
-}
 
-/* .card-header{
-    background-color: transparent;
-} */
-
-.download-resume-btn{
-    display: flex;
-    justify-content: end;
-
-    .animated-button{
-        @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
+    i.bi{
+        color: $pink;
+        font-weight: 700;
     }
 }

@@ -1,12 +1,21 @@
 <div class="container">
     <div class="row">
         <div class="intro col-lg-6">
-            <div class="row">
+            <div class="row intro-wrapper">
                 <div class="col-sm-5">
-                    <img src="../../../assets/img/profile-pic.png" alt="profile-picture" width="256" height="256" class="rounded-circle">
+                    <img src="../../../assets/img/profile-pic.png" alt="profile-picture" class="w-100 rounded-circle">
                 </div>
                 <div class="col-sm-7">
-                    <p>Front End developer in HTML5, CSS and JS, CMS and frameworks like Wordpress or Laravel, and control version with Git. I have a Communication background and mindset, which spans from copywriting to video production. Fluent in English and Italian, native Spanish and Catalan. Trying my best with Czech</p>
+                    <p>Front End developer in HTML5, CSS and JS, CMS and frameworks like Wordpress or Laravel, and control version with Git.</p>
+                    <p>I have a Communication background and mindset, which spans from copywriting to video production. Fluent in English and Italian, native Spanish and Catalan. Trying my best with Czech</p>
+                    <!-- PDF resume -->
+                    <div class="download-resume-btn">
+                        <button
+                            (click)="downloadFile()"
+                            class="animated-button">
+                            Download PDF Resume
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

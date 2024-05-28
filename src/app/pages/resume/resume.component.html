@@ -6,61 +6,68 @@
             <button 
                 accordion-heading
                 class="accordion-heading btn">
-                <h4 class="btn-link">Work Experience</h4>
+                <h3 class="btn-link">Work Experience</h3>
                 <i [hidden]="experienceIsOpen" class="bi bi-chevron-down"></i>
                 <i [hidden]="!experienceIsOpen" class="bi bi-chevron-up"></i>
             </button>
-            <div
+            <ng-container
                 *ngFor="let experience of experiences">
-                <app-experience [experience]="experience"></app-experience>
-            </div>  
+                <app-experience class="experience-item" [experience]="experience"></app-experience>
+            </ng-container>  
         </accordion-group>
         <!-- Education -->
         <accordion-group [(isOpen)]="educationIsOpen">
             <button 
                 accordion-heading
                 class="accordion-heading btn">
-                <h4 class="btn-link">Education</h4>
+                <h3 class="btn-link">Education</h3>
                 <i [hidden]="educationIsOpen" class="bi bi-chevron-down"></i>
                 <i [hidden]="!educationIsOpen" class="bi bi-chevron-up"></i>
             </button>
-            <div
+            <ng-container
                 *ngFor="let education of educations">
                 <app-education [education]="education"></app-education>
+            </ng-container>
+        </accordion-group>
+        <div class="row">
+            <!-- Languages -->
+            <div class="languages-accordion col-6">
+                <accordion-group [(isOpen)]="languagesIsOpen">
+                    <button 
+                        accordion-heading
+                        class="accordion-heading btn">
+                        <h3 class="btn-link">Languages</h3>
+                        <i [hidden]="languagesIsOpen" class="bi bi-chevron-down"></i>
+                        <i [hidden]="!languagesIsOpen" class="bi bi-chevron-up"></i>
+                    </button>
+                    <ng-container 
+                        *ngFor="let language of languages">
+                        <app-languages [language]="language"></app-languages>
+                    </ng-container>
+                </accordion-group>
             </div>
-        </accordion-group>
-        <!-- Languages -->
-        <accordion-group [(isOpen)]="languagesIsOpen">
-            <button 
-                accordion-heading
-                class="accordion-heading btn">
-                <h4 class="btn-link">Languages</h4>
-                <i [hidden]="languagesIsOpen" class="bi bi-chevron-down"></i>
-                <i [hidden]="!languagesIsOpen" class="bi bi-chevron-up"></i>
-            </button>
-            <div 
-                *ngFor="let language of languages">
-                <app-languages [language]="language"></app-languages>
+            <!-- Skills -->
+            <div class="skillls-accordion col-6">
+                <accordion-group [(isOpen)]="skillsIsOpen">
+                    <button 
+                        accordion-heading
+                        class="accordion-heading btn">
+                        <h3 class="btn-link">Skills</h3>
+                        <i [hidden]="skillsIsOpen" class="bi bi-chevron-down"></i>
+                        <i [hidden]="!skillsIsOpen" class="bi bi-chevron-up"></i>
+                    </button>
+                    <app-skills></app-skills>
+                </accordion-group>
             </div>
-        </accordion-group>
-        <!-- Skills -->
-        <accordion-group [(isOpen)]="skillsIsOpen">
-            <button 
-                accordion-heading
-                class="accordion-heading btn">
-                <h4 class="btn-link">Skills</h4>
-                <i [hidden]="skillsIsOpen" class="bi bi-chevron-down"></i>
-                <i [hidden]="!skillsIsOpen" class="bi bi-chevron-up"></i>
-            </button>
-            <app-skills></app-skills>
-        </accordion-group>
+        </div>
     </accordion>
+    
     <!-- PDF resume -->
-    <div class="download-resume-btn d-flex justify-content-end">
+    <!-- <div class="download-resume-btn d-flex justify-content-end">
         <button
             class="animated-button"  
             (click)="downloadFile()">
             Download PDF Resume
         </button>
-    </div>
+    </div> -->
 </div>
