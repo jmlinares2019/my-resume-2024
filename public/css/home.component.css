@@ -18,27 +18,24 @@
 
 .intro-wrapper {
   align-items: center;
-}
-.intro-wrapper:after {
-  content: "\f1c9";
-  font-family: bootstrap-icons !important;
-  font-size: 25rem;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  vertical-align: -0.125em;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 0.5rem;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: -60px;
-  right: -260px;
-  z-index: -1;
-  opacity: 0.1;
-  mix-blend-mode: hard-light;
+  /* &:after{ // make responsible
+      content: '\F1C9';
+      font-family: bootstrap-icons !important;
+      font-size: 25rem;
+      font-style: normal;
+      font-weight: normal !important;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      vertical-align: -.125em;
+      -webkit-font-smoothing: antialiased;
+      position: absolute;
+      top: -60px;
+      right: 0;
+      z-index: -1;
+      opacity: 0.1;
+      mix-blend-mode: hard-light;
+  } */
 }
 
 .download-resume-btn {
@@ -51,7 +48,7 @@
   border: 3px solid #F27BBD;
   background-image: linear-gradient(to right, #C65BCF, #F27BBD);
   color: white;
-  padding: 0.5em 1em;
+  padding: 0 1em;
   border-radius: 0.25em;
   position: relative;
   isolation: isolate;

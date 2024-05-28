@@ -12548,6 +12548,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: #F6F5F2;
   color: #1d1d1d;
   padding-top: 10vh;
 }
@@ -12567,6 +12568,7 @@ body {
 
 .card {
   --bs-card-border-color: transparent;
+  --bs-card-bg: transparent;
 }
 .card .card-header {
   background-color: transparent;

@@ -28,7 +28,7 @@
   border: 3px solid #F27BBD;
   background-image: linear-gradient(to right, #C65BCF, #F27BBD);
   color: white;
-  padding: 0.5em 1em;
+  padding: 0 1em;
   border-radius: 0.25em;
   position: relative;
   isolation: isolate;

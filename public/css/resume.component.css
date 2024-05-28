@@ -12,7 +12,10 @@
   font-style: normal;
 }
 
-.card-header {
+.accordion {
+  margin-bottom: 40px;
+}
+.accordion .card-header {
   border: 2px solid #10439F;
 }
 
@@ -25,6 +28,11 @@ button.btn.accordion-heading {
   padding-inline-start: 0px;
   --bs-btn-border-radius: 0;
   border-bottom: 2px solid #999999;
+  transition: background-color 0.2s, padding-left 0.2s;
+}
+button.btn.accordion-heading.open {
+  padding-left: 1rem;
+  background-color: #ececec;
 }
 button.btn.accordion-heading h3.btn-link {
   font-size: 1.15rem;

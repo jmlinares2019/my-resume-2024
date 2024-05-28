@@ -14,6 +14,7 @@
 
 .language-name {
   font-size: 1rem;
+  line-height: 1.5;
 }
 .language-name span.language-level {
   color: #999999;

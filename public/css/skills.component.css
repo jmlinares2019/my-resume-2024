@@ -12,9 +12,13 @@
   font-style: normal;
 }
 
+/* .skills-heading{
+
+} */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 .skills-list .skill-item {
   padding: 0.25rem;
@@ -32,6 +36,9 @@
 }
 .skills-list .language-item {
   color: #10439F;
+  border-color: #10439F;
+}
+.skills-list .language-item:hover {
   background-color: #10439F;
 }
 .skills-list .other-item {

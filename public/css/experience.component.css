@@ -16,11 +16,6 @@
   margin-top: 20px;
   padding-top: 10px;
 }
-.experience-wrapper:hover {
-  border: 1px dashed #F27BBD;
-  padding: 0.75rem;
-  transition: border 0.5s, padding 0.5s;
-}
 .experience-wrapper .experience-item-company:before {
   content: "\f140";
   display: inline-block;
