@@ -19,7 +19,7 @@ export class ResumeComponent implements OnInit{
   languages = {} as Language[];
   
   constructor(private titleService: Title, private ExperiencesService: ExperiencesService, private EducationService: EducationService, private LanguagesService: LanguagesService){
-    this.titleService.setTitle("John Doe - Resume");
+    this.titleService.setTitle("Juan Manuel Linares - Resume");
   }
 
   ngOnInit(): void {

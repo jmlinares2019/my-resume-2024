@@ -8,8 +8,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent {
 
-  constructor(private titleService: Title, private renderer: Renderer2, ){
-    this.titleService.setTitle("John Doe - Home");
+  constructor(private titleService: Title, private renderer: Renderer2){
+    this.titleService.setTitle("Juan Manuel Linares - Home");
   }
 
   // Download PDF file
@@ -21,6 +21,5 @@ export class HomeComponent {
     link.click();
     link.remove();
   }
-
   
 }
