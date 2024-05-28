@@ -19,17 +19,27 @@ export class PortfolioComponent implements OnInit{
   
   isCollapsed: boolean = true;
   filtering: boolean = false;
-
-  csharp: boolean = false;
+  // languages
+  html: boolean = false;
+  css: boolean = false;
   javascript: boolean = false;
   typescript: boolean = false;
-  python: boolean = false;
-  java: boolean = false;
-
-  aspnet: boolean = false;
+  php: boolean = false;
+  // others
   nodejs: boolean = false;
   angular: boolean = false;
   react: boolean = false;
+  json: boolean = false;
+  api: boolean = false;
+  wordpress: boolean = false;
+
+  csharp: boolean = false;
+  python: boolean = false;
+  java: boolean = false;
+  aspnet: boolean = false;
+
+
+
   
 
   ngOnInit(): void { 
