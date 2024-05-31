@@ -15,10 +15,15 @@
 .container {
   padding-top: 5vh;
 }
+@media screen and (max-width: 576px) {
+  .container {
+    width: 85%;
+  }
+}
 
 .form-wrapper {
   min-height: 70px;
-  align-items: center;
+  align-items: end;
   margin-bottom: 20px;
 }
 .form-wrapper .animated-button {
@@ -64,8 +69,17 @@
 .portfolio-wrapper {
   justify-content: space-between;
 }
+@media screen and (max-width: 576px) {
+  .portfolio-wrapper {
+    justify-content: center;
+  }
+}
 .portfolio-wrapper .card-wrapper {
-  max-width: 380px;
-  min-width: 380px;
   margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 576px) {
+  .portfolio-wrapper .card-wrapper {
+    max-width: 380px;
+    min-width: 380px;
+  }
 }

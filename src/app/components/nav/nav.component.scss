@@ -3,6 +3,12 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
+.container{
+    @include phone-down{
+        width: 85%;
+    }
+}
+
 nav.navbar{
     margin-bottom: 20px;
     align-items: baseline;
@@ -12,37 +18,43 @@ nav.navbar{
         background: linear-gradient(to right, $lightViolet, $pink);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include phone-down{
+            font-size: 2.1rem;
+        }
     }
     
     .navbar-collapse{
         justify-content: flex-end;
         order: 2;
-    
-        .nav-item{
-            color: $darkGrey;
-        }
-        
-        .nav-item-active{
-            color: lightgrey !important;
-        }
-    }
-    
-    .social-links{
-        display: flex;
-        // order: 2;
-    
-        a{
-            margin-right: .5rem;
-            color: $violet;
-    
-            i.bi{
-                &::before{
-                    font-size: x-large;
-                }
+
+        .navbar-nav{
+            .nav-item{
+                color: $darkGrey;
             }
             
+            .nav-item-active{
+                color: lightgrey !important;
+            }
+        }
+    
+        .social-links{
+            display: flex;
+        
+            a{
+                margin-right: .5rem;
+                color: $violet;
+        
+                i.bi{
+                    &::before{
+                        font-size: x-large;
+                    }
+                }
+                
+            }
         }
     }
+     
 }
 
 @media screen and (max-width: 992px){
@@ -53,6 +65,9 @@ nav.navbar{
 
     button.navbar-toggler{
         order: 2;
+        padding: 0.6rem;
+        border: 3px solid var(--bs-navbar-color);
+        border-radius: 50%;
     }
 
     .navbar-collapse{

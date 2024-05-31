@@ -12542,8 +12542,16 @@ bs-daterangepicker-container {
   font-style: normal;
 }
 
-body {
+html {
   font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
