@@ -1,5 +1,4 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { Experience } from '../../_models/Experience';
 import { Education } from '../../_models/Education'; 
 import { Language } from './../../_models/Languages';
@@ -18,8 +17,7 @@ export class ResumeComponent implements OnInit{
   educations = {} as Education[];
   languages = {} as Language[];
   
-  constructor(private titleService: Title, private ExperiencesService: ExperiencesService, private EducationService: EducationService, private LanguagesService: LanguagesService, private renderer: Renderer2){
-    this.titleService.setTitle("Juan Manuel Linares - Resume");
+  constructor(private ExperiencesService: ExperiencesService, private EducationService: EducationService, private LanguagesService: LanguagesService, private renderer: Renderer2){
   }
 
   ngOnInit(): void {
