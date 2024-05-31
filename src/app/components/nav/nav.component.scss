@@ -3,6 +3,12 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
+.container{
+    @include phone-down{
+        width: 85%;
+    }
+}
+
 nav.navbar{
     margin-bottom: 20px;
     align-items: baseline;
