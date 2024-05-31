@@ -12,7 +12,7 @@ import { Tag } from '../../_models/Tag';
 export class PortfolioComponent implements OnInit{
 
   constructor(private titleService: Title, private ProjectsService: ProjectsService){
-    this.titleService.setTitle("Juan Manuel Linares - Portfolio");
+    this.titleService.setTitle("Juan Manuel Linares - Frontend Developer");
   }
 
   projects = {} as Project[];

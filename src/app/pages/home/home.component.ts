@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 export class HomeComponent {
 
   constructor(private titleService: Title){
-    this.titleService.setTitle("Juan Manuel Linares - Home");
+    this.titleService.setTitle("Juan Manuel Linares - Frontend Developer");
   }
 
   
