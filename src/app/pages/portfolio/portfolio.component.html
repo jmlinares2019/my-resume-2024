@@ -2,7 +2,7 @@
 
     <div class="row form-wrapper">
         <!-- Buttons -->
-        <div class="button-wrapper col-lg-3 col-xl-2">
+        <div class="button-wrapper col-lg-2">
             <button 
                 class="animated-button me-2"
                 (click)="isCollapsed = !isCollapsed">
@@ -17,11 +17,11 @@
         </div>
         <!-- / Buttons -->
         <!-- Form -->
-        <div [collapse]="isCollapsed" class="col-lg-9 col-xl-10">
+        <div [collapse]="isCollapsed" class="col-lg-10">
             
             <form>
                 <div class="row mx-0">
-                    <div class="col d-sm-flex">
+                    <div class="col d-lg-flex">
                         <!-- Languages -->
                         <small class="grouping-labels"><b>Languages</b></small>
                         <div class="form-group">
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <!-- Frameworks (& others)-->
-                    <div class="col d-sm-flex">
+                    <div class="col d-lg-flex">
                         <small class="grouping-labels"><b>Others</b></small>
                         <div class="form-group">
                             <div class="form-check">

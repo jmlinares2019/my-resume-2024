@@ -4,15 +4,17 @@
 @import '../../../sass/abstracts/mixins';
 
 .card{
-    max-width: 350px;  // use .col- ?
-    min-width: 350px;
-    // cursor: pointer;
     border: 1px solid $midGrey;
     transition: background-color .2s;
 
     &:hover{
         color: $lightViolet;
         background-color: $lightGrey;
+    }
+
+    @include phone-up{
+        max-width: 350px;
+        min-width: 350px;
     }
 }
 
