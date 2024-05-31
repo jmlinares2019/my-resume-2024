@@ -12,6 +12,12 @@
   font-style: normal;
 }
 
+@media screen and (max-width: 576px) {
+  .container {
+    width: 85%;
+  }
+}
+
 nav.navbar {
   margin-bottom: 20px;
   align-items: baseline;
@@ -22,24 +28,29 @@ nav.navbar h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (max-width: 576px) {
+  nav.navbar h1 {
+    font-size: 2.1rem;
+  }
+}
 nav.navbar .navbar-collapse {
   justify-content: flex-end;
   order: 2;
 }
-nav.navbar .navbar-collapse .nav-item {
+nav.navbar .navbar-collapse .navbar-nav .nav-item {
   color: #9d9d9d;
 }
-nav.navbar .navbar-collapse .nav-item-active {
+nav.navbar .navbar-collapse .navbar-nav .nav-item-active {
   color: lightgrey !important;
 }
-nav.navbar .social-links {
+nav.navbar .navbar-collapse .social-links {
   display: flex;
 }
-nav.navbar .social-links a {
+nav.navbar .navbar-collapse .social-links a {
   margin-right: 0.5rem;
   color: #874CCC;
 }
-nav.navbar .social-links a i.bi::before {
+nav.navbar .navbar-collapse .social-links a i.bi::before {
   font-size: x-large;
 }
 
@@ -49,6 +60,9 @@ nav.navbar .social-links a i.bi::before {
   }
   button.navbar-toggler {
     order: 2;
+    padding: 0.6rem;
+    border: 3px solid var(--bs-navbar-color);
+    border-radius: 50%;
   }
   .navbar-collapse {
     justify-content: flex-end;
