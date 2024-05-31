@@ -5,50 +5,77 @@
 
 .intro-wrapper{
     justify-content: center;
-}
 
-.intro{
-    position: relative;
+    .intro{
+        position: relative;
+    
+        @include phone-down{
+            width: 85%;
+        }
+    
+        > .row{
+            align-items: center;
 
-    @include phone-down{
-        width: 85%;
+            @include desktop-to-largest-desktop{
+                align-items: flex-start;
+            }
+    
+            .profile-img{
+    
+                @include phone-down{
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+    
+                img{
+                    border-radius: 50%;
+    
+                    @include phone-up{
+                        width: 100%;
+                    }
+                }
+                
+            }
+
+            .intro-content{
+                
+                @include desktop-to-large-desktop{
+                    font-size: 14px;
+                }
+
+                .contact-links{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 1rem;
+                
+                    i{
+                        font-style: normal;
+                
+                        &::before{
+                            border: 1px solid $black;
+                            padding: .3rem;
+                            border-radius: 50%;
+                        }
+                
+                        a{
+                            font-size: 0.9rem;
+                            padding-left: .5rem;
+                            color: $violet;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+            }
+        }
     }
 
-    > .row{
-        align-items: center;
+    .resume{
+        margin-bottom: 40px;
 
-        .profile-img{
-
-            @include phone-down{
-                text-align: center;
-                margin-bottom: 20px;
-            }
-
-            img{
-                border-radius: 50%;
-
-                @include phone-up{
-                    width: 100%;
-                }
-            }
-            
+        @include desktop-down{
+            margin-top: 20px;
         }
     }
 }
-
-
-
-.download-resume-btn{
-    display: flex;
-
-    .animated-button{
-        @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
-    }
-}
-
-@media screen and (max-width: 991.98px){
-    .resume{
-        margin-top: 20px;
-    }
-} 
 

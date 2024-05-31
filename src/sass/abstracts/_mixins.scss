@@ -122,6 +122,12 @@
   }
 }
 
+@mixin desktop-to-largest-desktop{
+  @media screen and (min-width: $desktop) and (max-width: $largest-desktop) {
+    @content;
+}
+}
+
 @mixin desktop-up{
   @media screen and (min-width: $desktop){
       @content;
@@ -137,5 +143,17 @@
 @mixin large-desktop-up{
   @media screen and (min-width: $large-desktop){
       @content;
+  }
+}
+
+@mixin largest-desktop-down{
+  @media screen and (min-width: $largest-desktop){
+    @content;
+  }
+}
+
+@mixin largest-desktop-up{
+  @media screen and (max-width: $largest-desktop){
+    @content;
   }
 }

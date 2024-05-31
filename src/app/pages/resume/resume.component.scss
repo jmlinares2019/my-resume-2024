@@ -42,3 +42,11 @@ button.btn.accordion-heading{
         font-weight: 700;
     }
 }
+
+.download-resume-btn{
+    display: flex;
+
+    .animated-button{
+        @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
+    }
+}

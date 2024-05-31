@@ -3,47 +3,48 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
-.container{
+.portfolio-section{
     padding-top: 5vh;
 
     @include phone-down{
         width: 85%;
     }
-}
 
-.form-wrapper{
-    min-height: 70px;
-    align-items: end;
-    margin-bottom: 20px;
-
-    .animated-button{
-        @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
-        margin-bottom: 10px;
-    }
-
-    small.grouping-labels{
-        min-width: 100px;
-    }
-
-    .form-group{
-        min-width: 7rem;
-    }
-}
-
-.portfolio-wrapper{
-    justify-content: space-between;
-
-    @include phone-down{
-        justify-content: center;
-    }
-
-    .card-wrapper{
-        margin-bottom: 1.5rem;
-
-        @include phone-up{
-            max-width: 380px; 
-            min-width: 380px;
+    .form-wrapper{
+        min-height: 70px;
+        align-items: end;
+        margin-bottom: 20px;
+    
+        .animated-button{
+            @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
+            margin-bottom: 10px;
+        }
+    
+        small.grouping-labels{
+            min-width: 100px;
+        }
+    
+        .form-group{
+            min-width: 7rem;
         }
     }
+    
+    .portfolio-wrapper{
+        justify-content: space-between;
+    
+        @include phone-down{
+            justify-content: center;
+        }
+    
+        .card-wrapper{
+            margin-bottom: 1.5rem;
+    
+            @include phone-up{
+                max-width: 380px; 
+                min-width: 380px;
+            }
+        }
+    }
+    
 }
 
