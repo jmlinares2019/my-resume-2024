@@ -3,17 +3,25 @@
 @import '../../../sass/abstracts/fonts';
 @import '../../../sass/abstracts/mixins';
 
+.intro-wrapper{
+    justify-content: center;
+}
+
 .intro{
     position: relative;
 
-    .intro-wrapper{
+    @include phone-down{
+        width: 85%;
+    }
+
+    > .row{
         align-items: center;
 
         .profile-img{
 
             @include phone-down{
                 text-align: center;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
 
             img{
