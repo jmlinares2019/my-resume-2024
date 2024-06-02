@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Project } from '../../_models/Project';
-import { BsModalRef} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-project-card',
@@ -10,9 +9,13 @@ import { BsModalRef} from 'ngx-bootstrap/modal';
 
 export class ProjectCardComponent {
   @Input() project = {} as Project; 
-  bsModalRef?: BsModalRef;
+  @Output() dataEvent = new EventEmitter<string>();
 
   constructor(){
 
+  }
+
+  filterProjects(tag: string){
+    this.dataEvent.emit(tag)
   }
 }
