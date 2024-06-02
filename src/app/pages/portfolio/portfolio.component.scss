@@ -17,6 +17,7 @@
     
         .animated-button{
             @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
+            margin-right: 1rem;
             margin-bottom: 10px;
         }
     
@@ -26,6 +27,11 @@
     
         .form-group{
             min-width: 7rem;
+
+            .form-check-input:checked{
+                background-color: $lightBlue;
+                border-color: $lightBlue;
+            }
         }
     }
     
