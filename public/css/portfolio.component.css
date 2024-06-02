@@ -36,6 +36,7 @@
   border-radius: 0.25em;
   position: relative;
   isolation: isolate;
+  margin-right: 1rem;
   margin-bottom: 10px;
 }
 .portfolio-section .form-wrapper .animated-button:hover {
@@ -63,6 +64,10 @@
 }
 .portfolio-section .form-wrapper .form-group {
   min-width: 7rem;
+}
+.portfolio-section .form-wrapper .form-group .form-check-input:checked {
+  background-color: #86afea;
+  border-color: #86afea;
 }
 .portfolio-section .portfolio-wrapper {
   justify-content: space-between;
