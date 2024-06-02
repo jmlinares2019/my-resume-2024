@@ -9,6 +9,9 @@
 // Importing Datepicker SCSS file
 @import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
+// Importing ngx-ui-switch styles
+@import '../node_modules/ngx-ui-switch/ui-switch.component.scss';
+
 // Sass partials
 @import 'sass/abstracts/variables';
 @import 'sass/abstracts/fonts';
@@ -30,6 +33,63 @@ body{
     color: $black;
 
     padding-top: 10vh;
+
+    // Dark mode
+    button.switch{ // only applies here (?)
+        margin-right: 1rem;
+    
+        @include desktop-down{
+            margin-bottom: 10px;
+        }
+    }
+
+    &.night-mode{
+        background-color: $black !important;
+        color: $white !important;
+
+        h2.job-role,
+        h3.resume-section-heading,
+        .experience-item-company,
+        .experience-item-position,
+        .education-title,
+        .language-name,
+        .skills-heading{
+            color: $white;
+        }
+
+        button.btn.accordion-heading{
+            &.open{
+                background-color: transparent;
+            }
+        }
+
+        button.navbar-toggler{
+            color: $white;
+            border-color: $white !important;
+        }
+
+        .project-link,
+        .language-item{
+            color: $lightBlue !important;
+            border-color: $lightBlue !important;
+        }
+
+        .card-title,
+        .card-links .bi::before{
+            color: $white;            
+        }
+
+        .card:hover{
+            .card-title,
+            .card-links .bi::before{
+                color: $black;
+            }
+        }
+
+        .contact-links a{
+            color: $lightBlue !important;
+        }
+    }
 }
 
 div{

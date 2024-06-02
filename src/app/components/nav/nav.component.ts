@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  changeMode(){
+    const body = document.getElementsByTagName("body")[0];
+    if(body.classList.contains("night-mode")){
+      body.classList.remove("night-mode");
+    } else {
+      body.classList.add("night-mode");
+    }
+  }
+
 }
