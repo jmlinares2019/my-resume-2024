@@ -1,19 +1,19 @@
-<div class="container">
+<div class="portfolio-section container">
 
     <div class="row form-wrapper">
         <!-- Buttons -->
         <div class="button-wrapper col-lg-2">
             <button 
-                class="animated-button me-2"
+                class="animated-button"
                 (click)="isCollapsed = !isCollapsed">
                 Filter
-            </button><!-- btn btn-outline-primary mb-2 -->
+            </button>
             <button 
                 [hidden]="!filtering"
                 class="animated-button"
                 (click)="resetFilters()">
                 Reset
-            </button><!-- btn btn-outline-secondary mb-2 -->
+            </button>
         </div>
         <!-- / Buttons -->
         <!-- Form -->
@@ -28,7 +28,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="html"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="html"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">HTML5</label>
@@ -38,7 +38,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="css"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="css"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">CSS3</label>
@@ -47,8 +47,18 @@
                         <div class="form-group">
                             <div class="form-check">
                                 <input type="checkbox"
+                                    name="sass"
+                                    class="form-check-input"
+                                    [(ngModel)]="sass"
+                                    (change)="filterProjects()">
+                                <label class="form-check-label small">Saas</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox"
                                     name="javascript"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="javascript"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">JavaScript</label>
@@ -58,7 +68,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="typescript"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="typescript"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">TypeScript</label>
@@ -68,7 +78,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="php"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="php"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">PHP</label>
@@ -82,7 +92,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="ng"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="angular"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">Angular</label>
@@ -92,7 +102,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="react"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="react"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">React</label>
@@ -102,7 +112,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="nodejs"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="nodejs"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">NodeJS</label>
@@ -112,7 +122,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="json"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="json"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">JSON</label>
@@ -122,7 +132,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="api"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="api"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">REST API</label>
@@ -132,7 +142,7 @@
                             <div class="form-check">
                                 <input type="checkbox"
                                     name="wordpress"
-                                    class="form-check-input position-static me-2"
+                                    class="form-check-input"
                                     [(ngModel)]="wordpress"
                                     (change)="filterProjects()">
                                 <label class="form-check-label small">Wordpress</label>
@@ -150,7 +160,9 @@
         <div 
             *ngFor="let project of projects"
             class="card-wrapper col-lg-4 col-md-6">
-            <app-project-card [project]="project">
+            <app-project-card 
+                [project]="project"
+                (dataEvent)="filterFromCardTags($event)">
                 <!-- Project -->
             </app-project-card>
         </div>

@@ -34,15 +34,51 @@ button.btn.accordion-heading.open {
   padding-left: 1rem;
   background-color: #ececec;
 }
-button.btn.accordion-heading h3.btn-link {
+button.btn.accordion-heading h3.resume-section-heading {
   font-size: 1.15rem;
   text-decoration: none;
   transition: color 0.2s;
 }
-button.btn.accordion-heading h3.btn-link:hover {
+button.btn.accordion-heading h3.resume-section-heading:hover {
   color: #9d9d9d;
 }
 button.btn.accordion-heading i.bi {
   color: #F27BBD;
   font-weight: 700;
+}
+
+.download-resume-btn {
+  display: flex;
+}
+.download-resume-btn .animated-button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: 3px solid #F27BBD;
+  background-image: linear-gradient(to right, #C65BCF, #F27BBD);
+  color: white;
+  padding: 0 1em;
+  border-radius: 0.25em;
+  position: relative;
+  isolation: isolate;
+}
+.download-resume-btn .animated-button:hover {
+  color: #F27BBD;
+  scale: 0.975;
+  transition: scale 50ms;
+}
+.download-resume-btn .animated-button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #F6F5F2;
+  color: #F27BBD;
+  inset: 0;
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale 250ms;
+}
+.download-resume-btn .animated-button:hover::after, .download-resume-btn .animated-button:focus-visible::after {
+  scale: 1 1;
+  transform-origin: left;
 }

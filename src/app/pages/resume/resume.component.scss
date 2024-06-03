@@ -27,7 +27,7 @@ button.btn.accordion-heading{
         background-color: $lightGrey;
     }
 
-    h3.btn-link{
+    h3.resume-section-heading{
         font-size: 1.15rem;
         text-decoration: none;
         transition: color .2s;
@@ -40,5 +40,13 @@ button.btn.accordion-heading{
     i.bi{
         color: $pink;
         font-weight: 700;
+    }
+}
+
+.download-resume-btn{
+    display: flex;
+
+    .animated-button{
+        @include animated-button(linear-gradient(to right, $lightViolet, $pink), $pink);
     }
 }

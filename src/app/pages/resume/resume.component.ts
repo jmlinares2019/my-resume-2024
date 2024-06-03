@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Experience } from '../../_models/Experience';
 import { Education } from '../../_models/Education'; 
 import { Language } from './../../_models/Languages';
@@ -18,8 +17,7 @@ export class ResumeComponent implements OnInit{
   educations = {} as Education[];
   languages = {} as Language[];
   
-  constructor(private titleService: Title, private ExperiencesService: ExperiencesService, private EducationService: EducationService, private LanguagesService: LanguagesService){
-    this.titleService.setTitle("Juan Manuel Linares - Resume");
+  constructor(private ExperiencesService: ExperiencesService, private EducationService: EducationService, private LanguagesService: LanguagesService, private renderer: Renderer2){
   }
 
   ngOnInit(): void {
@@ -39,4 +37,14 @@ export class ResumeComponent implements OnInit{
 
   // Skills
   skillsIsOpen: boolean = false;
+
+  // Download PDF file
+  downloadFile(){
+    const link = this.renderer.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'assets/resume_2023.pdf');
+    link.setAttribute('download', 'resume_2023.pdf');
+    link.click();
+    link.remove();
+  }
 }

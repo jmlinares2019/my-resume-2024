@@ -1,22 +1,27 @@
-<div class="card"><!-- (click)="OpenProjectModal()" -->
+<div class="card">
     <div class="card-body">
         <h5 class="card-title">{{project.name}}</h5>
         <p class="card-text">{{project.summary}}</p>
-        <!-- <button class="btn">View More</button> -->
         <div class="card-links">
             <!-- <span>View in: </span> -->
             <a href="{{ project.projectWebLink }}" target="_blank">
                 <i class="bi bi-browser-chrome"></i>
             </a>
-            <a href="{{ project.projectRepoLink }}" target="_blank">
-                <i class="bi bi-github"></i>
-            </a>
+            <div *ngIf="project.projectRepoLink.length > 0">
+                <a href="{{ project.projectRepoLink }}" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
         </div>
     </div>
     <div class="card-footer">
         <div class="tags-list">
             <div *ngFor="let tag of project.tags">
-                <span class="tag" [style.backgroundColor]="tag.color">{{tag}}</span>
+                <span 
+                    class="tag" 
+                    (click)="filterProjects(tag.value)">
+                    {{tag}}
+                </span>
             </div>
         </div>
     </div>

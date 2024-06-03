@@ -5,17 +5,18 @@
       <h1 class="figtree-bold">
         <a class="home-link" routerLink="/home">Juan Manuel <span class="break">Linares</span></a>
       </h1>
-    <h2>Frontend Developer</h2>
+    <h2 class="job-role">Frontend Developer</h2>
     </div>
     
     <!-- navbar toggler -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <i class="bi bi-list"></i>
     </button>
     <!-- Navbar links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <!-- Internal links -->
       <div class="navbar-nav">
+        <ui-switch (change)="changeMode()"></ui-switch>
         <a class="nav-item nav-link" routerLink="/home" routerLinkActive="nav-item-active">Home</a>
         <a class="nav-item nav-link" routerLink="/portfolio" routerLinkActive="nav-item-active">Portfolio</a>
         <!-- <a class="nav-item nav-link" routerLink="/resume" routerLinkActive="nav-item-active">Resume</a> -->

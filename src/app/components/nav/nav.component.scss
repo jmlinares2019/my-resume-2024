@@ -22,11 +22,27 @@ nav.navbar{
         @include phone-down{
             font-size: 2.1rem;
         }
+
+        a{
+            text-decoration: none;
+        }
+    }
+
+    button.navbar-toggler{
+        order: 2;
+        padding: 0.6rem;
+        border: 3px solid var(--bs-navbar-color);
+        border-radius: 50%;
     }
     
     .navbar-collapse{
         justify-content: flex-end;
         order: 2;
+        
+        @include desktop-down{
+            justify-content: flex-end;
+            order: 3;
+        }
 
         .navbar-nav{
             .nav-item{
@@ -40,6 +56,14 @@ nav.navbar{
     
         .social-links{
             display: flex;
+
+            @include desktop-down{
+                padding-top: 10px;
+            }
+
+            @include desktop-up{
+                margin-left: 1rem;
+            }
         
             a{
                 margin-right: .5rem;
@@ -55,29 +79,4 @@ nav.navbar{
         }
     }
      
-}
-
-@media screen and (max-width: 992px){
-    .social-links{
-        padding-top: 10px;
-        // order: 1;
-    }
-
-    button.navbar-toggler{
-        order: 2;
-        padding: 0.6rem;
-        border: 3px solid var(--bs-navbar-color);
-        border-radius: 50%;
-    }
-
-    .navbar-collapse{
-        justify-content: flex-end;
-        order: 3;
-    }
-}
-
-@media screen and (min-width: 992px){
-    .social-links{
-        margin-left: 1rem;
-    } 
 }
