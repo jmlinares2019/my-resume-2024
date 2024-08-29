@@ -5,11 +5,18 @@
 
 .card{
     border: 1px solid $midGrey;
-    transition: background-color .2s;
+    transition: all .2s;
 
     &:hover{
-        color: $lightViolet;
-        background-color: $lightGrey;
+        background-image: linear-gradient(to right, $lightViolet, $pink);
+
+        .card-text, 
+        .tag{
+            color: $white;
+            border-color: $white;
+        }
+
+
     }
 
     @include phone-up{
