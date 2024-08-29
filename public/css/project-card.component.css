@@ -14,11 +14,15 @@
 
 .card {
   border: 1px solid #999999;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 .card:hover {
-  color: #C65BCF;
-  background-color: #ececec;
+  background-image: linear-gradient(to right, #C65BCF, #F27BBD);
+}
+.card:hover .card-text,
+.card:hover .tag {
+  color: #F6F5F2;
+  border-color: #F6F5F2;
 }
 @media screen and (min-width: 576px) {
   .card {
