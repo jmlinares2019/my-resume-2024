@@ -45,6 +45,14 @@ nav.navbar{
         }
 
         .navbar-nav{
+            @include desktop-up{
+                align-items: center;
+
+                .nav-item{
+                    padding-bottom: .8rem;
+                }
+            }
+
             .nav-item{
                 color: $darkGrey;
             }
